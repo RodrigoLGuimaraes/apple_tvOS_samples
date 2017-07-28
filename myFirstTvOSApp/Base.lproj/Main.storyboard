@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UgI-SD-U5O">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="l0d-YO-W1y">
+            <objects>
+                <collectionViewController id="UgI-SD-U5O" customClass="CollectionViewController" customModule="myFirstTvOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2tp-hV-jdX">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="40" id="P5g-iQ-ymI">
+                            <size key="itemSize" width="400" height="230"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="40" minY="40" maxX="40" maxY="40"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KaN-YV-5TW" customClass="CollectionViewCell" customModule="myFirstTvOSApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="90" width="400" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="230"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qix-aM-k5M">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="230"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="qix-aM-k5M" firstAttribute="height" secondItem="KaN-YV-5TW" secondAttribute="height" id="2x1-ZE-zn2"/>
+                                    <constraint firstItem="qix-aM-k5M" firstAttribute="centerX" secondItem="KaN-YV-5TW" secondAttribute="centerX" id="5TG-yI-NVU"/>
+                                    <constraint firstItem="qix-aM-k5M" firstAttribute="centerY" secondItem="KaN-YV-5TW" secondAttribute="centerY" id="Hv1-cu-NJM"/>
+                                    <constraint firstItem="qix-aM-k5M" firstAttribute="width" secondItem="KaN-YV-5TW" secondAttribute="width" id="crY-fw-hG0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellImageView" destination="qix-aM-k5M" id="gwB-rP-RwJ"/>
+                                    <segue destination="oHT-Dn-XVV" kind="show" identifier="showDetails" id="O1x-tG-Yx9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="b6h-lm-GOB" customClass="SectionHeader" customModule="myFirstTvOSApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="1920" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M07-vE-ssY">
+                                    <rect key="frame" x="40" y="0.0" width="26" height="50"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="M07-vE-ssY" firstAttribute="height" secondItem="b6h-lm-GOB" secondAttribute="height" id="1vV-Na-IaZ"/>
+                                <constraint firstItem="M07-vE-ssY" firstAttribute="leading" secondItem="b6h-lm-GOB" secondAttribute="leading" constant="40" id="DS2-ZS-jTo"/>
+                                <constraint firstItem="M07-vE-ssY" firstAttribute="centerY" secondItem="b6h-lm-GOB" secondAttribute="centerY" id="zex-Ia-OpE"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="M07-vE-ssY" id="OH0-Up-5QA"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="UgI-SD-U5O" id="gjc-xs-h3W"/>
+                            <outlet property="delegate" destination="UgI-SD-U5O" id="nSt-ti-wxu"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXM-PR-0Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="-230"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="VcD-ib-eel">
+            <objects>
+                <viewController id="oHT-Dn-XVV" customClass="DetailViewController" customModule="myFirstTvOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="niU-XV-oMW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fph-dD-8Np"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DFi-MP-528">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-5L-EFR">
+                                <rect key="frame" x="40" y="76" width="1152" height="648"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car: Test Year: 2017 HP: A lot Price: You can't afford it" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgD-Fg-3CY">
+                                <rect key="frame" x="1232" y="76" width="648" height="904"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.25872217465753422" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr2-Go-wNS">
+                                <rect key="frame" x="40" y="824" width="1152" height="156"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="ORDER NOW"/>
+                                <connections>
+                                    <action selector="didOrder:" destination="oHT-Dn-XVV" eventType="primaryActionTriggered" id="CWL-9c-VUX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Fph-dD-8Np" firstAttribute="top" secondItem="mgD-Fg-3CY" secondAttribute="bottom" constant="40" id="6tH-OJ-rPS"/>
+                            <constraint firstItem="Wr2-Go-wNS" firstAttribute="leading" secondItem="DFi-MP-528" secondAttribute="leading" constant="40" id="8dJ-2p-9Fn"/>
+                            <constraint firstItem="Wr2-Go-wNS" firstAttribute="top" secondItem="OWk-5L-EFR" secondAttribute="bottom" constant="100" id="FfW-0c-njt"/>
+                            <constraint firstItem="OWk-5L-EFR" firstAttribute="height" secondItem="DFi-MP-528" secondAttribute="height" multiplier="0.6" id="Flm-gc-Vms"/>
+                            <constraint firstItem="mgD-Fg-3CY" firstAttribute="leading" secondItem="Wr2-Go-wNS" secondAttribute="trailing" constant="40" id="GgU-6i-DqA"/>
+                            <constraint firstItem="Wr2-Go-wNS" firstAttribute="bottom" secondItem="mgD-Fg-3CY" secondAttribute="bottom" id="Hj4-mI-YKR"/>
+                            <constraint firstItem="mgD-Fg-3CY" firstAttribute="top" secondItem="OWk-5L-EFR" secondAttribute="top" id="KWW-Cb-NRr"/>
+                            <constraint firstAttribute="trailing" secondItem="mgD-Fg-3CY" secondAttribute="trailing" constant="40" id="PJc-rF-O8u"/>
+                            <constraint firstItem="mgD-Fg-3CY" firstAttribute="leading" secondItem="OWk-5L-EFR" secondAttribute="trailing" constant="40" id="cin-W3-EYz"/>
+                            <constraint firstItem="OWk-5L-EFR" firstAttribute="leading" secondItem="DFi-MP-528" secondAttribute="leading" constant="40" id="iVo-tV-12V"/>
+                            <constraint firstItem="OWk-5L-EFR" firstAttribute="top" secondItem="niU-XV-oMW" secondAttribute="bottom" multiplier="0.6" constant="40" id="tM1-gp-jwk"/>
+                            <constraint firstItem="OWk-5L-EFR" firstAttribute="width" secondItem="DFi-MP-528" secondAttribute="width" multiplier="0.6" id="yJM-GL-VNB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="OWk-5L-EFR" id="XZG-az-ZdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5r-0l-kzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="-187"/>
+        </scene>
+    </scenes>
+</document>
