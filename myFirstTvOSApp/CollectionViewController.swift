@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController {
     
-    var imageArray = ["Aston1.jpg", "Audi1.jpg", "bmw1.jpg", "Bugatti1.jpg", "Ferrari1.jpg", "Lamborghini1.jpg", "Mclaren1.jpg", "Mercedes1.jpg"]
+    var imageArray = ["CellParallax", "Audi1.jpg", "bmw1.jpg", "Bugatti1.jpg", "Ferrari1.jpg", "Lamborghini1.jpg", "Mclaren1.jpg", "Mercedes1.jpg"]
     
     var sectionsDictionary = [Character : Int]()
     var sectionsTitles = [Character]()

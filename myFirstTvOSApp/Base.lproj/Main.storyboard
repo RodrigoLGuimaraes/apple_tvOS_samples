@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UgI-SD-U5O">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Nr-gU-ous">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Catálogo-->
         <scene sceneID="l0d-YO-W1y">
             <objects>
                 <collectionViewController id="UgI-SD-U5O" customClass="CollectionViewController" customModule="myFirstTvOSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,10 +74,64 @@
                             <outlet property="delegate" destination="UgI-SD-U5O" id="nSt-ti-wxu"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Catálogo" id="yp0-nP-mG4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXM-PR-0Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57" y="-230"/>
+        </scene>
+        <!--Parallax-->
+        <scene sceneID="iJJ-GZ-aqh">
+            <objects>
+                <viewController id="34O-f6-aqY" customClass="ParallaxButtonViewController" customModule="myFirstTvOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XHt-T6-Q7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z6E-2y-qqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="So3-Uh-6fP">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKd-DN-emg">
+                                <rect key="frame" x="710" y="290" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="2du-LL-qGS"/>
+                                    <constraint firstAttribute="width" constant="500" id="Bap-V4-ngE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ExampleParallax"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wKd-DN-emg" firstAttribute="centerY" secondItem="So3-Uh-6fP" secondAttribute="centerY" id="4aE-4M-IQY"/>
+                            <constraint firstItem="wKd-DN-emg" firstAttribute="centerX" secondItem="So3-Uh-6fP" secondAttribute="centerX" id="sDU-eZ-PJ2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Parallax" id="cAG-l3-3Cy"/>
+                    <connections>
+                        <outlet property="button" destination="wKd-DN-emg" id="8M4-7U-rbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKP-p9-ibV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="1953"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="QIv-Pp-Edx">
+            <objects>
+                <tabBarController id="4Nr-gU-ous" customClass="TabBarViewController" customModule="myFirstTvOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Zvl-jK-nPK">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UgI-SD-U5O" kind="relationship" relationship="viewControllers" id="wsu-0B-zha"/>
+                        <segue destination="34O-f6-aqY" kind="relationship" relationship="viewControllers" id="jOw-l5-foi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2h-MS-znO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2993" y="-230"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="VcD-ib-eel">
@@ -91,16 +146,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-5L-EFR">
-                                <rect key="frame" x="40" y="76" width="1152" height="648"/>
+                                <rect key="frame" x="40" y="40" width="1152" height="648"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car: Test Year: 2017 HP: A lot Price: You can't afford it" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgD-Fg-3CY">
-                                <rect key="frame" x="1232" y="76" width="648" height="904"/>
+                                <rect key="frame" x="1232" y="40" width="648" height="1000"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.25872217465753422" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr2-Go-wNS">
-                                <rect key="frame" x="40" y="824" width="1152" height="156"/>
+                                <rect key="frame" x="40" y="788" width="1152" height="252"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="ORDER NOW"/>
                                 <connections>
@@ -132,4 +188,7 @@
             <point key="canvasLocation" x="2372" y="-187"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ExampleParallax" width="2238" height="2238"/>
+    </resources>
 </document>

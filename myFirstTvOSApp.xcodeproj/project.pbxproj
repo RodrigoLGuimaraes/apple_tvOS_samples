@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EB137E61F3135C2003B5346 /* ParallaxButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB137E51F3135C2003B5346 /* ParallaxButtonViewController.swift */; };
+		8EB138081F317E89003B5346 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138071F317E89003B5346 /* TabBarViewController.swift */; };
 		E078AACD1F2AA66600E1C355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078AACC1F2AA66600E1C355 /* AppDelegate.swift */; };
 		E078AAD21F2AA66600E1C355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E078AAD01F2AA66600E1C355 /* Main.storyboard */; };
 		E078AAD41F2AA66600E1C355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E078AAD31F2AA66600E1C355 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EB137E51F3135C2003B5346 /* ParallaxButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxButtonViewController.swift; sourceTree = "<group>"; };
+		8EB138071F317E89003B5346 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E078AAC91F2AA66600E1C355 /* myFirstTvOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstTvOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E078AACC1F2AA66600E1C355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E078AAD11F2AA66600E1C355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				E078AADD1F2AA8D700E1C355 /* CollectionViewCell.swift */,
 				E0AD5BF91F2AB677002217C0 /* SectionHeader.swift */,
 				E0AD5BFB1F2ABA4D002217C0 /* DetailViewController.swift */,
+				8EB137E51F3135C2003B5346 /* ParallaxButtonViewController.swift */,
+				8EB138071F317E89003B5346 /* TabBarViewController.swift */,
 			);
 			path = myFirstTvOSApp;
 			sourceTree = "<group>";
@@ -141,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0AD5BFA1F2AB677002217C0 /* SectionHeader.swift in Sources */,
+				8EB137E61F3135C2003B5346 /* ParallaxButtonViewController.swift in Sources */,
 				E078AADC1F2AA8C400E1C355 /* CollectionViewController.swift in Sources */,
 				E0AD5BFC1F2ABA4D002217C0 /* DetailViewController.swift in Sources */,
+				8EB138081F317E89003B5346 /* TabBarViewController.swift in Sources */,
 				E078AACD1F2AA66600E1C355 /* AppDelegate.swift in Sources */,
 				E078AADE1F2AA8D700E1C355 /* CollectionViewCell.swift in Sources */,
 			);
@@ -268,14 +276,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = XD7FRD528A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = myFirstTvOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeMonkeys.myFirstTvOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Debug;
 		};
@@ -284,14 +292,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = XD7FRD528A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = myFirstTvOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeMonkeys.myFirstTvOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
